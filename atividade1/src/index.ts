@@ -26,6 +26,7 @@ interface LookupCityOutput {
   LookupCityResult: {
     City: string;
     State: string;
+    Zip: string;
   };
 }
 
@@ -60,7 +61,7 @@ createClient(url, (err, client) => {
 
   client.LookupCity(lookupCityArgs, (err, result: LookupCityOutput) => {
   
-    console.log(`Resultado do LookupCity: ${result.LookupCityResult.City}`);
+    console.log(`Resultado do LookupCity: ${result.LookupCityResult.City}, ${result.LookupCityResult.State}, ${result.LookupCityResult.Zip}`);
 
   });
 

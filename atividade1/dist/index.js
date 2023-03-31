@@ -25,7 +25,7 @@ const lookupCityArgs = { zip: '90210' };
         console.log(`Resultado do DivideInteger: ${result.DivideIntegerResult}`);
     });
     client.LookupCity(lookupCityArgs, (err, result) => {
-        console.log(`Resultado do LookupCity: ${result.LookupCityResult.City}`);
+        console.log(`Resultado do LookupCity: ${result.LookupCityResult.City}, ${result.LookupCityResult.State}, ${result.LookupCityResult.Zip}`);
     });
 });
 //# sourceMappingURL=index.js.map
